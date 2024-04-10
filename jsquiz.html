@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <!-- Linking the external CSS file to style the quiz -->
+    <link rel="stylesheet" href="jsquiz.css">
+</head>
+
+<body>
+
+    <!-- Container for the entire quiz, ensuring everything is centered and styled consistently -->
+    <div id="quiz-container">
+        <!-- Quiz header displaying the title -->
+        <header>
+            <h1>JavaScript Quiz</h1>
+        </header>
+        <!-- A divider below the header for visual separation -->
+        <div id="header-divider" class="divider">
+            <hr>
+        </div>
+
+        <!-- Section containing the current question and options -->
+        <section id="question-container">
+            <!-- Display area for the current quiz question -->
+            <div id="question">Quiz question will appear here</div>
+            <!-- Horizontal rule for visual separation between the question and the options -->
+            <hr>
+            <!-- Container for the answer options as buttons -->
+            <div id="options-container">
+                <h2>Options</h2>
+                <br>
+                <!-- Each button represents an option, with an onclick event to process the selection -->
+                <button class="option" onclick="selectOption(0)">Option 1: Answer as button</button>
+                <button class="option" onclick="selectOption(1)">Option 2: Answer as button</button>
+                <button class="option" onclick="selectOption(2)">Option 3: Answer as button</button>
+                <button class="option" onclick="selectOption(3)">Option 4: Answer as button</button>
+            </div>
+            <!-- Another horizontal rule to visually separate options from the progress indicator -->
+            <hr>
+            <!-- Displays the current question number and total number of questions -->
+            <div id="progress">Question <span id="current-question-number">1</span> of <span
+                    id="total-questions">10</span></div>
+        </section>
+
+        <!-- Footer containing the "Next" button to navigate through the quiz -->
+        <footer>
+            <button id="next-button" onclick="nextQuestion()">Next</button>
+        </footer>
+    </div>
+
+    <!-- Container for displaying the result, hidden initially and shown after completing the quiz -->
+    <div id="result-container" style="display: none;">
+        <h2>Your Score:</h2>
+        <div id="score"></div>
+    </div>
+
+    <!-- Linking the external JavaScript file containing the quiz logic -->
+    <script src="jsquiz.js"></script>
+</body>
+
+</html>
